@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.1/examples/blog/blog.css" rel="stylesheet">
+    <title>自製深度學習 -- 繪製數字圖片上傳，同時預測結果</title>
+  </head>
+  <body>
+    <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">數字圖片辨識</a>
+            </div>
+        </div>
+    </header>
+
+    <h1>請依提示與順序來上傳繪製圖片，圖片長寬比例一致。</h1>
+    <form name="myForm" method="POST" action="prediction.php">
+        <div class="container">
+            <label>檔名為 0.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 1.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 2.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 3.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 4.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 5.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 6.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 7.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 8.png</label>
+            <input type="file" name="file[]" />
+            <br />
+            <label>檔名為 9.png</label>
+            <input type="file" name="file[]" />
+        </div>
+        <input type="submit" name="smb" value="按我送出" />
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>
