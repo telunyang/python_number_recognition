@@ -61,3 +61,37 @@ conda install -c conda-forge matplotlib
 
 ## 設定 KERAS_BACKEND=tensorflow
 set "KERAS_BACKEND=tensorflow"
+
+## 說明
+1. word.txt
+預測文字的來源，目前以數字為主。
+
+2. gen.py
+產生訓練用的數字圖片。
+
+3. train.py
+建立深度學習的模型，並將訓練結果加以儲存，以便之後的預測。
+
+4. test.py
+進行預測，並取得比對後的結果。
+
+5. index.html
+上傳用的頁面。
+
+6. prediction.php
+預測結果的展示頁面。
+
+7. ttf/
+字型庫，用來匯出同個數字、不同字型的圖片結果。教學用途，若有侵權，敬請告知，將在 24 小時內刪除。
+
+8. words/
+執行 gen.py 後，其產生的圖片放置處。
+
+9. test/
+放置上傳圖片與轉成 csv 檔的放置地點。
+
+10. model.config
+訓練後的模型設定。
+
+11. model.weight
+權重。
