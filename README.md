@@ -24,7 +24,7 @@ cd <your-project-path>
 
 3. 建立 Conda 環境，這裡安裝 Python 3.6，環境名稱為 tensorflow
 ```
-C:> conda create -n tensorflow pip python=3.6
+conda create -n tensorflow pip python=3.6
 ```
 
 
