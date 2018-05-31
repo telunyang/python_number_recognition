@@ -15,7 +15,7 @@ f.close
 def numRandom():
     return random.randint(0, 999999999999)
 
-def paste(text, font, imgName, area = (5,3)):
+def saveImg(text, font, imgName, area = (5,3)):
     im = Image.new('RGB', (28,28), (255,255,255))
     rtext = font.render(text, True, (0,0,0), (255,255,255))
     sio = io.StringIO()
@@ -37,14 +37,14 @@ for m in range(len(ttf)):
     
     for i in range(length):
         text = text_list[i].encode('utf-8').decode('utf-8')
-        imgName = text_list[i] + '_' + str(numRandom()) + '.png'
+        imgName = str(numRandom()) + '_' + text_list[i] + '_sample.png'
         if os.path.isfile(imgName):
-            imgName = text_list[i] + '_' + str(numRandom()) + str(numRandom()) + '.png'
-            paste(text, font, imgName)
+            imgName = str(numRandom()) + str(numRandom()) + '_' + text_list[i] + '_sample.png'
+            saveImg(text, font, imgName)
             continue
         else:
             try:
-                paste(text, font, imgName)
+                saveImg(text, font, imgName)
             except:
                 pass
     os.chdir('..')

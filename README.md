@@ -1,11 +1,17 @@
 # Python-Number-Recognition
 用 Python 客製化深度學習的過程，也可以自行繪製圖片進行結果預測
 
+## 2018.06.01 修正中
+此專案尚未修正完成
+
 ## 文字圖片產出範例
 ![0-2](https://github.com/telunyang/Python-Number-Recognition/blob/master/example01.png)
 ![5-5](https://github.com/telunyang/Python-Number-Recognition/blob/master/example02.png)
 ![5-7](https://github.com/telunyang/Python-Number-Recognition/blob/master/example03.png)
 ![7-9](https://github.com/telunyang/Python-Number-Recognition/blob/master/example04.png)
+
+## 以 Windows 10 可用於繁體的字型為範例
+![數字的label](https://github.com/telunyang/Python-Number-Recognition/blob/master/example05.png)
 
 ## 製作流程
 1. 安裝 Anaconda

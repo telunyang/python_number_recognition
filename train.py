@@ -21,15 +21,15 @@ def read_image(img_name):
 
 def read_label(img_name):
     basename = os.path.basename(img_name)
-    data = basename.split('_')[0]
+    data = basename.split('_')[1]
     return data
 
 def plot_images_labels_prediction(images, labels, prediction, idx, num = 10):
     fig = plt.gcf()
     fig.set_size_inches(12,14)
-    if num > 100: num = 100
+    if num > 25: num = 25
     for i in range(0, num):
-        ax = plt.subplot(10,10,1+i)
+        ax = plt.subplot(5,5,1+i)
         ax.imshow(images[idx], cmap='binary')
         title = "label=" + str(labels[idx])
         if len(prediction) > 0:
@@ -57,10 +57,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 
-plot_images_labels_prediction(images, labels, [], 0, 100)
+#plot_images_labels_prediction(images, labels, [], 0, 25)
 
 batch_size = 200
-nb_epoch = 200
+nb_epoch = 100
 
 model = Sequential()
 model.add(Dense(units=512, input_dim=784, kernel_initializer='normal'))
@@ -85,7 +85,7 @@ history = model.fit(
     X_train, 
     y_train,
     batch_size=batch_size,
-    nb_epoch=nb_epoch,
+    epochs=nb_epoch,
     verbose=1,
     validation_data=(X_test, y_test))
 
